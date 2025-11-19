@@ -549,6 +549,14 @@ __Agent loop ends__
 - `after_*` hooks: Last to first (reverse)
 - `wrap_*` hooks: Nested (first middleware wraps all others)
 
+### Detailed execution flow
+
+The following diagram illustrates the complete agent execution lifecycle with all middleware hook points:
+
+![Middleware execution flow](/oss/images/agent-middleware-execution-flow.svg)
+
+This flow is based on the LangChain agent execution model. For code implementation details, see the [LangChain agents factory](https://github.com/langchain-ai/langchain/blob/81c4f21b5297b31b2cd82ccefdd134aa0e59efa0/libs/langchain_v1/langchain/agents/factory.py).
+
 ## Agent jumps
 
 To exit early from middleware, return a dictionary with `jump_to`:
