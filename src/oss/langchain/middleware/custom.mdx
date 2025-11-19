@@ -553,9 +553,10 @@ __Agent loop ends__
 
 The following diagram illustrates the complete agent execution lifecycle with all middleware hook points:
 
-![Middleware execution flow](/oss/images/agent-middleware-execution-flow.svg)
-
-This flow is based on the LangChain agent execution model. For code implementation details, see the [langchain/libs/langchain_v1/langchain/agents/factory.py](https://github.com/langchain-ai/langchain/blob/81c4f21b5297b31b2cd82ccefdd134aa0e59efa0/libs/langchain_v1/langchain/agents/factory.py).
+<figure>
+  <img src="/oss/images/agent-middleware-execution-flow.svg" alt="Middleware execution flow diagram showing agent lifecycle with before_agent, before_model, wrap_model_call, after_model, and after_agent hooks" />
+  <figcaption>Based on the <a href="https://github.com/langchain-ai/langchain/blob/81c4f21b5297b31b2cd82ccefdd134aa0e59efa0/libs/langchain_v1/langchain/agents/factory.py">LangChain agents factory implementation</a>.</figcaption>
+</figure>
 
 ## Agent jumps
 
